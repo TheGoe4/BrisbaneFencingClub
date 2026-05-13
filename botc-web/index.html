@@ -221,10 +221,10 @@
                         </div>
                     </div>
 
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="script-select">Script</label>
-                            <select id="script-select">
+                    <div class="form-row" hidden>
+                        <div class="form-group" hidden>
+                            <label for="script-select" hidden>Match Type</label>
+                            <select id="script-select" hidden>
                                 <option value="Trouble Brewing">Individual Match</option>
                                 <option value="Bad Moon Rising">Team Match</option>
                                 <!---
@@ -253,7 +253,7 @@
                     <div class="form-row" hidden>
                         <div class="form-group" hidden>
                             <label for="fabled-input" hidden>Fabled <span class="label-hint" hidden>(optional)</span></label>
-                            <input type="text" id="fabled-input" placeholder="e.g., Djinn, Angel">
+                            <input type="text" id="fabled-input" placeholder="e.g., Djinn, Angel" hidden>
                         </div>
                         <div class="form-group" hidden>
                             <label for="lorics-input" hidden>Lorics <span class="label-hint" hidden>(optional)</span></label>
