@@ -771,7 +771,11 @@ async function performGameSearch() {
                 header.appendChild(gameIdSpan);
                 header.appendChild(winnerSpan);
 
+                const details = document.createElement('div');
+                details.className = 'game-result-details';
 
+                const scriptSpan = document.createElement('span');
+                scriptSpan.textContent = game.game_mode || 'Unknown Script';
 
                 const stSpan = document.createElement('span');
                 stSpan.textContent = `ST: ${(game.story_teller || 'Unknown').replace(/_/g, ' ').replace(/\+/g, ', ')}`;
