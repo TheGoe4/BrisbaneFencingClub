@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blood on the Clocktower Stats</title>
-    <meta name="description" content="ELO ratings and statistics for Fencing games">
+    <meta name="description" content="ELO ratings and statistics for Blood on the Clocktower games">
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
@@ -16,7 +16,7 @@
     <div class="container">
         <!-- Header -->
         <header>
-            <h1>Brisbane Fencing Club</h1>
+            <h1>Blood on the Clocktower</h1>
             <p>ELO Rankings & Game Statistics</p>
             <nav class="header-nav">
                 <a href="index.html" class="active">Leaderboard</a>
@@ -38,13 +38,39 @@
 
         <!-- Main Content -->
         <div id="content" style="display: none;">
-          
+            <!-- Win Percentages Bar -->
+            <div class="win-bar-container">
+                <div class="win-bar-header">
+                    <h2>Win Percentages</h2>
+                    <span class="win-bar-meta"><span id="total-games">0</span> games | <span id="total-players">0</span> players</span>
+                </div>
+                <div class="win-bar">
+                    <div class="no-games-msg" id="no-games-msg" style="display: none;">No games logged yet</div>
+                    <div class="win-bar-good" id="win-bar-good">
+                        <span class="win-bar-label"><span id="good-wins-count">0</span> good wins</span>
+                        <span class="win-bar-pct" id="good-wins">0%</span>
+                    </div>
+                    <div class="win-bar-evil" id="win-bar-evil">
+                        <span class="win-bar-label"><span id="evil-wins-count">0</span> evil wins</span>
+                        <span class="win-bar-pct" id="evil-wins">0%</span>
+                    </div>
+                </div>
+            </div>
 
             <!-- Leaderboard -->
             <div class="table-container">
                 <div class="table-header">
                     <h2>Player Rankings</h2>
                     <div class="controls">
+                        <label for="game-type-filter">Games:</label>
+                        <select id="game-type-filter">
+                            <option value="all">All Games</option>
+                            <option value="normal">Normal Only</option>
+                            <option value="teensyville">Teensyville Only</option>
+                        </select>
+                        <label for="game-range">Range:</label>
+                        <input type="text" id="game-range" placeholder="e.g., 67-69">
+                        <button id="clear-range" class="secondary">Clear</button>
                         <button class="add-game-btn" id="add-game-btn">+ Add Game</button>
                         <button class="edit-game-btn secondary" id="edit-game-btn">Edit Game</button>
                     </div>
@@ -58,7 +84,8 @@
                             <th data-sort="rating">Rating</th>
                             <th>Delta</th>
                             <th data-sort="overall">Overall Win %</th>
-                        
+                            <th data-sort="good">Good Win %</th>
+                            <th data-sort="evil">Evil Win %</th>
                             <th data-sort="games">Games</th>
                         </tr>
                     </thead>
@@ -71,7 +98,11 @@
 
         <!-- Footer -->
         <footer>
-           
+            <p>
+                Data tracked with love for the Town.
+                <br>
+                <a href="https://github.com/RossFW/botc-stats" target="_blank">View on GitHub</a>
+            </p>
         </footer>
     </div>
 
