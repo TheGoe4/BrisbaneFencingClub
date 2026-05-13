@@ -20,13 +20,13 @@ const SITE_CONFIG = {
     // ==========================================
 
     // Community name shown in the header
-    communityName: 'Blood on the Clocktower',
+    communityName: 'BrisbaneFencingClub',
 
     // Minimum games a player needs to appear on the leaderboard
     minGamesForLeaderboard: 1,
 
     // ELO settings
-    defaultRating: 1500,    // Starting ELO for new players
+    defaultRating: 1000,    // Starting ELO for new players
     kFactor: 32,            // How much each game affects ratings (higher = more volatile)
 };
 
