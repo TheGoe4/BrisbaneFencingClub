@@ -153,7 +153,7 @@ class AutocompleteInstance {
         }
 
         // After the first space - typing the role (second word)
-        const roleStart = lineStart + spaceIndex + 1;
+       /* const roleStart = lineStart + spaceIndex + 1;
         const roleText = text.substring(roleStart, cursor);
 
         // Handle compound roles with +
