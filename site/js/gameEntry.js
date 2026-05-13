@@ -769,7 +769,7 @@ async function performGameSearch() {
                 winnerSpan.textContent = `${game.winning_team} Won`;
 
                 header.appendChild(gameIdSpan);
-              
+                header.appendChild(winnerSpan);
 
 
 
