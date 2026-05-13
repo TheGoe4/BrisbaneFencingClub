@@ -104,8 +104,8 @@
 
             <!-- Step 2: Game Entry Form -->
             <div id="form-step" class="modal-step" style="display: none;">
-                <h3 id="form-title">Add New Match</h3>
-                <p class="modal-subtitle" id="form-subtitle">Enter match details below</p>
+                <h3 id="form-title">Add New Game</h3>
+                <p class="modal-subtitle" id="form-subtitle">Enter game details below</p>
 
                 <div class="game-form">
                     <!-- Input Format Help -->
@@ -114,27 +114,67 @@
                             <span class="help-icon">?</span> Input Format Help
                         </button>
                         <div class="help-content" id="help-content">
-                            <p><strong>Player format:</strong> <code>Name</code></p>
+                            <p><strong>Player format:</strong> <code>Name Role [TeamHint]</code></p>
                             <p class="help-detail">One player per line. Autocomplete suggests names and roles as you type.</p>
 
                             <p class="help-detail" style="margin-top: 8px;"><strong>Names:</strong> Names can be anything — just be consistent so stats track correctly. Use underscores for spaces.</p>
-                            
+                            <div class="help-examples">
+                                <div class="help-example">
+                                    <code>Jane Imp</code>
+                                    <span>First name only</span>
+                                </div>
+                                <div class="help-example">
+                                    <code>Jane_Doe Imp</code>
+                                    <span>Full name (underscore = space)</span>
+                                </div>
+                                <div class="help-example">
+                                    <code>JaneD Imp</code>
+                                    <span>Nickname — whatever your group uses</span>
+                                </div>
+                            </div>
 
-                           
+                            <p class="help-detail" style="margin-top: 8px;"><strong>Roles &amp; team changes:</strong></p>
+                            <div class="help-examples">
+                                <div class="help-example">
+                                    <code>John Snake_Charmer+Witch</code>
+                                    <span>Multiple roles (use <strong>+</strong>)</span>
+                                </div>
+                                <div class="help-example">
+                                    <code>Mike Chef Good->Evil</code>
+                                    <span>Team change (use <strong>-></strong>)</span>
+                                </div>
+                            </div>
+                            <p class="help-note"><em>Put team-changers in their FINAL team's section.</em></p>
+
+                            <p class="help-detail" style="margin-top: 8px;"><strong>Storyteller:</strong> Multiple storytellers? Use <strong>+</strong> (e.g., <code>Jane+Mike</code>).</p>
+
+                            <p class="help-detail" style="margin-top: 4px;"><strong>Fabled &amp; Lorics:</strong> Optional comma-separated fields below the script. These are game-level modifiers, not player roles.</p>
+                        </div>
                     </div>
 
                     <div class="form-row teams-row">
                         <div class="form-group">
                             <label for="team1-input">Team 1 Players</label>
-                            <textarea id="team1-input" rows="10" placeholder="Name;e.g., Sarah_Lin"></textarea>
+                            <textarea id="team1-input" rows="10" placeholder="Name Role&#10;e.g., Sarah_Lin Imp&#10;Tom_Nguyen Poisoner"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="team2-input">Team 2 Players</label>
-                            <textarea id="team2-input" rows="10" placeholder="Name ;e.g., Mike_Chen"></textarea>
+                            <textarea id="team2-input" rows="10" placeholder="Name Role&#10;e.g., Mike_Chen Chef&#10;Priya_Patel Empath"></textarea>
                         </div>
                     </div>
 
-                   
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Which team is Evil?</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="evil-team" value="1"> Team 1
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="evil-team" value="2"> Team 2
+                                </label>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label>Which team won?</label>
                             <div class="radio-group">
@@ -152,13 +192,25 @@
                         <div class="form-group">
                             <label for="script-select">Script</label>
                             <select id="script-select">
-                                <option value="Individual">Individual Match</option>
-                                <option value="Team">Team Match</option>
-                                
+                                <option value="Trouble Brewing">Trouble Brewing</option>
+                                <option value="Bad Moon Rising">Bad Moon Rising</option>
+                                <option value="Sects & Violets">Sects & Violets</option>
+                                <option value="Trouble in Violets">Trouble in Violets</option>
+                                <option value="No Greater Joy">No Greater Joy</option>
+                                <option value="Over the River">Over the River</option>
+                                <option value="Laissez un Faire">Laissez un Faire</option>
+                                <option value="Trouble in Legion">Trouble in Legion</option>
+                                <option value="Hide & Seek">Hide & Seek</option>
+                                <option value="Trouble Brewing on Expert Mode">Trouble Brewing on Expert Mode</option>
+                                <option value="Trained Killer">Trained Killer</option>
+                                <option value="Irrational Behavior">Irrational Behavior</option>
+                                <option value="Binary Supernovae">Binary Supernovae</option>
+                                <option value="A Leech of Distrust">A Leech of Distrust</option>
+                                <option value="Everybody Can Play">Everybody Can Play</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="storyteller-input">Referee</label>
+                            <label for="storyteller-input">Storyteller</label>
                             <input type="text" id="storyteller-input" placeholder="e.g., Alex_Rivera">
                         </div>
                     </div>
