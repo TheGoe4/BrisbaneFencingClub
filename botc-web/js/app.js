@@ -322,22 +322,7 @@ function renderLeaderboard() {
                     </div>
                 </div>
             </td>
-            <td class="pct">
-                <div class="pct-bar">
-                    <span>${pctToStr(player.goodWinPct)}%</span>
-                    <div class="bar">
-                        <div class="bar-fill good" style="width: ${player.goodWinPct || 0}%"></div>
-                    </div>
-                </div>
-            </td>
-            <td class="pct">
-                <div class="pct-bar">
-                    <span>${pctToStr(player.evilWinPct)}%</span>
-                    <div class="bar">
-                        <div class="bar-fill evil" style="width: ${player.evilWinPct || 0}%"></div>
-                    </div>
-                </div>
-            </td>
+            
             <td class="games">${player.gamesPlayed}</td>
         `;
 
