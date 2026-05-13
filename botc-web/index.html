@@ -146,7 +146,7 @@
                             <span class="help-icon">?</span> Input Format Help
                         </button>
                         <div class="help-content" id="help-content">
-                            <p><strong>Player format:</strong> <code>Name Role [TeamHint]</code></p>
+                            <p><strong>Player format:</strong> <code>Name</code></p>
                             <p class="help-detail">One player per line NO SPACES use NAME_LASTNAME. Autocomplete suggests names as you type.</p>
 
                             <p class="help-detail" style="margin-top: 8px;"><strong>Names:</strong> Names can be anything — just be consistent so stats track correctly. Use underscores for spaces.</p>
@@ -196,8 +196,8 @@
                     </div>
 
                     <div class="form-row">
-                        <div class="form-group" hidden>
-                            <label>Which team is Evil?</label>
+                        <div class="form-group">
+                            <label>Pick any option here I can't remove it or it breaks</label>
                             <div class="radio-group">
                                 <label class="radio-label">
                                     <input type="radio" name="evil-team" value="1"> Team 1
@@ -224,8 +224,9 @@
                         <div class="form-group">
                             <label for="script-select">Script</label>
                             <select id="script-select">
-                                <option value="Trouble Brewing">Trouble Brewing</option>
-                                <option value="Bad Moon Rising">Bad Moon Rising</option>
+                                <option value="Trouble Brewing">Individual Match</option>
+                                <option value="Bad Moon Rising">Team Match</option>
+                                <!---
                                 <option value="Sects & Violets">Sects & Violets</option>
                                 <option value="Trouble in Violets">Trouble in Violets</option>
                                 <option value="No Greater Joy">No Greater Joy</option>
@@ -239,22 +240,23 @@
                                 <option value="Binary Supernovae">Binary Supernovae</option>
                                 <option value="A Leech of Distrust">A Leech of Distrust</option>
                                 <option value="Everybody Can Play">Everybody Can Play</option>
+                                --->
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="storyteller-input">Storyteller</label>
+                            <label for="storyteller-input">Referee</label>
                             <input type="text" id="storyteller-input" placeholder="e.g., Alex_Rivera">
                         </div>
                     </div>
 
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="fabled-input">Fabled <span class="label-hint">(optional)</span></label>
+                    <div class="form-row" hidden>
+                        <div class="form-group" hidden>
+                            <label for="fabled-input" hidden>Fabled <span class="label-hint" hidden>(optional)</span></label>
                             <input type="text" id="fabled-input" placeholder="e.g., Djinn, Angel">
                         </div>
-                        <div class="form-group">
-                            <label for="lorics-input">Lorics <span class="label-hint">(optional)</span></label>
-                            <input type="text" id="lorics-input" placeholder="e.g., Bootlegger">
+                        <div class="form-group" hidden>
+                            <label for="lorics-input" hidden>Lorics <span class="label-hint" hidden>(optional)</span></label>
+                            <input type="text" id="lorics-input" placeholder="e.g., Bootlegger" hidden>
                         </div>
                     </div>
 
